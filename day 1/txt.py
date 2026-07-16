@@ -8,6 +8,7 @@ name=str(input("what is your name? "))
 age=int(input("what is your age? "))
 country=str(input("what is your country? "))
 height=float(input("what is your height? "))
+account=input("do you have an account? (yes/no) :")
 learning_python=bool(input("do you learn python? (yes/no) :"))
 opinion=bool(input("do you think python is useful in 2026? (yes/no) :"))
 
