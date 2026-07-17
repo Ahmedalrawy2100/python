@@ -37,7 +37,7 @@ while True:
         #age
         while True:
             age=int(input("Enter your age: "))
-            if age > 0:
+            if age >= 16:
                 break
             print("Invalid age! Please enter a valid age.")
         #courses
