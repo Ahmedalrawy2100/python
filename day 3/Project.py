@@ -1,90 +1,61 @@
 # Welcome Message
 print("Welcome to Student Management System")
 
-name=""
-age=0
-courses=0
-
 # Menu
-options = [
+menu = (
     "Add Student",
     "Show Students",
+    "Search Student",
+    "Update Student",
+    "Delete Student",
     "Exit"
+)
+students = [
+
+    # {
+    #     "name":"Ahmed",
+    #     "age":25,
+    #     "courses":["Python","Linux"]
+    # },
+
+    # {
+    #     "name":"Ali",
+    #     "age":20,
+    #     "courses":["CCNA"]
+    # },
+
+    # {
+    #     "name":"Mohamed",
+    #     "age":30,
+    #     "courses":["c++","CCNA"]
+    # }
+
 ]
 
 while True:
 
-    # Print Menu
-    i = 1
-    for word in options:
-        print(f"{i}-{word}")
-        i += 1
+    #menu
+    i=1
+    for optino in menu:
+        print(f"{i}-{optino}")
+        i+=1
+    # use choose
+    num_choose=input("enter number please: ")
 
-    # User Choice
-    num_choose = input("Choose a number: ")
-
-
-    # -------------------------
-    # Add Student
-    # -------------------------
-
-    if num_choose=="1":
-        #name
-        name=input("enter your name:")
-        if name =="admin":
-            print("This name is not allowed.")
-            continue
-        #age
-        while True:
-            age=int(input("Enter your age: "))
-            if age >= 16:
-                break
-            print("Invalid age! Please enter a valid age.")
-        #courses
-        while True:
-            courses=int(input("How many courses?"))
-
-            if courses > 5:
-                print("Maximum is 5 courses.")
-
-            elif courses < 1:
-                print("You must choose at least one course.")
-
-            else:
-                break
-        # Print Courses 
-        for i in range(1, courses + 1):
-
-           course_name = input(f"Enter Course {i}: ")
-
-        print("\nStudent Added Successfully.")
-    
-    # -------------------
-    # Show Student
-    # -------------------
-
+    if num_choose =="1":
+        print("add student")
     elif num_choose =="2":
-        if name=="":
-            print("No student found.")
-        else :
-            print(f"\nName : {name}")
-            print(f"Age : {age}")
-            print(f"Number of Courses : {courses}")
-
-    # -------------------
-    # Exit
-    # -------------------  
-
+        print("show students")
     elif num_choose =="3":
-            print("Goodbye Ahmed.")
-            break
+        print('search student')
+    elif num_choose =="4":
+        print("update")
+    elif num_choose =="5":
+        print("delete")
+    elif num_choose=="6":
+       print( "bye")
+       break
+    else :
+        print("invaled")
 
-    # -------------------
-    # Wrong Choice
-    # -------------------
-
-    else:
-        print("Invalid Choice.")
-
-            
 
