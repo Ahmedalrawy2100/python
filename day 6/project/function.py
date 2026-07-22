@@ -1,4 +1,5 @@
 # date % function
+import os
 import random
 from datetime import datetime
 
@@ -8,6 +9,9 @@ menu = (
     "Exit"
 )
 #=======================================================
+# Get the path to movies.txt in the same directory as this script
+movies_file = os.path.join(os.path.dirname(__file__), "movies.txt")
+
 def show_menu():
 
     i = 1
@@ -21,7 +25,7 @@ def add_movie():
 
     movie_name = input("Enter Movie Name: ")
 
-    file = open("movies.txt", "a")
+    file = open(movies_file, "a")
 
     file.write(movie_name + "\n")
 
@@ -39,7 +43,7 @@ def time():
 
 def Pick_Random_Movie():
 
-    file=open("movies.txt","r")
+    file=open(movies_file,"r")
 
     movies=file.readlines()
 
