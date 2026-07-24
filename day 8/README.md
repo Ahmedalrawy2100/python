@@ -50,8 +50,7 @@ Each task contains:
 project/
 │
 ├── main.py
-├── function.py
-└── classes.py
+└── function.py
 ```
 
 ---
