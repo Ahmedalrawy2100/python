@@ -41,7 +41,7 @@ while True:
 
     elif choice == "2":
 
-        if pet1 is None:
+        if not pet1 :
             print("No Pet Found.")
 
         else:

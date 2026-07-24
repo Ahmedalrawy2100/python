@@ -1,7 +1,51 @@
+# -----------------------------------
+# --      Exceptions Handling      --
+# -- Try | Except | Else | Finally --
+# -----------------------------------
+# Try     => Test The Code For Errors
+# Except  => Handle The Errors
+# ----------------------------
+# Else    => If No Errors
+# Finally => Run The Code
+# ------------------------
+
+
+try:  # Try The Code and Test Errors
+
+  number = int(input("Write Your Age: "))
+
+
+except:  # Handle The Errors If Its Found  # noqa: E722
+
+  print("Bad, This is Not Integer")
+
+else:  # If Theres No Errors
+
+  print("Good, This Is Integer From Else")
+
+finally:
+
+  print("Print From Finally Whatever Happens")
 
 
 try:
-    num=input("what is your age")
+
+  # print(10 / 0)
+  # print(x)
+  print(int("Hello"))
+
+except ZeroDivisionError:
+
+  print("Cant Divide")
+
+except NameError:
+
+  print("Identifier Not Found")
+
+except ValueError:
+
+  print("Value Error Elzero")
+
 except:  # noqa: E722
 
-    print("this not intger")
+  print("Error Happens")
